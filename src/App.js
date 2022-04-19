@@ -1,10 +1,9 @@
 // const logo = require('./logo.svg');
-import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-import BemVindo from './components/BemVindo';
-import NavBar from './components/NavBar'
+import NavBar from './components/NavBar';
+import Perfil from './Pages/Perfil';
 
 function App() {
   const caminhos = [
@@ -29,20 +28,10 @@ function App() {
       titulo: 'Busca'
     }
   ];
-
-  const [num, setNum] = useState(1);
-  const aumentaNum = () => setNum(num + 1);
-
   return (
     <div >
       <NavBar menu={caminhos}  />
-      <h1>{num}</h1><button onClick={aumentaNum}>Clique</button>
-      <BemVindo meuNome="Léo"></BemVindo>
-      <BemVindo meuNome="Lígia"/>
-      <BemVindo />
-      <BemVindo />
-      <BemVindo />
-      <BemVindo />
+      <Perfil />
     </div>
   );
 }
